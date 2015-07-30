@@ -1,13 +1,16 @@
 // console.log('TEST');
 
-$('#cntry-btn').on('click',function(){
+$('#cntry-btn').on('submit',function(event){
+	event.preventDefault();
 	$.ajax({
 		method : 'GET',
 		url    : '/countries',
 		success : function(data){
-			for(i=0,i<data.length,i++){
-				$('.cntry-container').append('<li>' + data[i].name +'</li>');
-			}
+			data.forEach(function(country){
+				// console.log(country.name);
+				$('.cntry-list').append('<li>' + country.name + '</li>');
+				// $('body').after('<li>' + country.name + '</li>');
+			})
 		}
 	})
-})
+});

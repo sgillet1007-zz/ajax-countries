@@ -12,10 +12,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.get('/', indexController.index);
 
 app.get('/countries', function(req, res){
-	//var countryList
 	res.send(countries);
 });
 
-var server = app.listen(7657, function() {
+var server = app.listen(3000, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
