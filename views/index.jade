@@ -2,6 +2,10 @@ extends layout
 
 block content
 	h1 AJAX Countries
+	form
+		input#str(type='text',size='25',placeholder='Enter country name here')
+		button#search search
 	form#cntry-btn
 		button Load Countries
+
 	ul.cntry-list

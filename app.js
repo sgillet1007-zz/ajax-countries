@@ -15,6 +15,10 @@ app.get('/countries', function(req, res){
 	res.send(countries);
 });
 
+app.post('/search', function(req, res){
+	res.send(countries);
+});
+
 var server = app.listen(3000, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
